@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-peer1:8761/eureka,http://eureka-peer2:8762/eureka
+---
+spring:
+  profiles: narrow
+min: 0
+max: 10
+server:
+  port: 8010
+---
+spring:
+  profiles: wide
+min: 0
+max: 1000
+server:
+  port: 8011
