@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-peer1:8761/eureka,http://eureka-peer2:8762/eureka
+---
+spring:
+  profiles: correct
+baseUrl: http://random.cat/view/
+server:
+  port: 8000
+---
+spring:
+  profiles: incorrect
+baseUrl: http://random.dog/
+server:
+  port: 8001
